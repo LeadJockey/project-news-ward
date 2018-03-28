@@ -1,0 +1,19 @@
+doctype html
+html
+	head(lang="ko")
+		title news-ward
+	body
+		ul(style='list-style:none')
+			each article in root.articles
+				li(style='width:300px;border:1px solid red;word-break:break-all')
+					p
+						a(href= article.url)= article.title
+					p
+						img(src=article.urlToImage style='width:300px;height:200px')
+					p= article.description
+					p= article.source.name
+					p= article.author
+					p= article.publishedAt
+
+
+
