@@ -11,7 +11,7 @@ const _          = require('underscore');
 const mongoose   = require('mongoose');
 const db         = mongoose.connection;
 
-const q          = '이명박';
+const q = 'world';
 
 app.set('port', 3000);
 app.set('db-url', 'mongodb://shawn:1234@ds127129.mlab.com:27129/news-ward')

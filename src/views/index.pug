@@ -8,8 +8,8 @@ html
 				li(style='width:300px;border:1px solid red;word-break:break-all')
 					p
 						a(href= article.url)= article.title
-					p
-						img(src=article.urlToImage style='width:300px;height:200px')
+					p(style='overflow:hidden;width:300px;height:200px')
+						img(src=article.urlToImage style='width:100%;vertical-align:top')
 					p= article.description
 					p= article.source.name
 					p= article.author
