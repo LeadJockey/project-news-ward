@@ -20,6 +20,7 @@
   "dependencies": {
     "dateformat": "^3.0.3",
     "express": "^4.16.3",
+    "lodash": "^4.17.10",
     "mongoose": "^5.0.12",
     "morgan": "^1.9.0",
     "newsapi": "^2.2.2",

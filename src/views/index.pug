@@ -10,12 +10,14 @@ html
 					p
 						a(href= article.url)= article.title
 						button(style='margin-left:20px;background-color:green;color:#fff;font-size:20px') scrap
-					p(style='overflow:hidden;width:100%;height:150px')
-						img(src=article.urlToImage style='width:100%;vertical-align:top')
+					p(style='overflow:hidden;width:100%;height:150px;text-align:center')
+						img(src=article.urlToImage style='height:100%;vertical-align:top')
 					p= article.description
 					p= article.source.name
 					p= article.author
 					p= article.publishedAt
+
+
 
 
 
