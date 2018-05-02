@@ -1,13 +1,13 @@
-const express    = require('express');
-const app        = express();
-const morgan     = require('morgan');
-const path       = require('path');
-const mongoose   = require('mongoose');
-
-const db         = mongoose.connection;
+const express = require('express');
+const app = express();
+const morgan = require('morgan');
+const path = require('path');
+const mongoose = require('mongoose');
+const expressPromise = require('express-promise');
+const db = mongoose.connection;
 
 app.set('port', 3000);
-app.set('db-url', 'mongodb://shawn:1234@ds127129.mlab.com:27129/news-ward')
+app.set('db-url', 'mongodb://shawn:1234@ds127129.mlab.com:27129/news-ward');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -18,7 +18,9 @@ mongoose.connect(app.get('db-url'));
 app.use(morgan('dev'));
 
 app.use('/', require('./routes'));
+app.use('/user', require('./routes'));
 
-app.listen(app.get('port'), () => {
-	console.log(`server listening on port ${app.get('port')}`);
+
+app.listen(app.get('port'), () =>{
+  console.log(`server listening on port ${app.get('port')}`);
 });
